@@ -17,12 +17,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Extract secrets
+    - name: npm install, build, and test
       with:
         secret: ${{ secrets.AIO_CNA_TVMURL }}
-      env:
-        secret: ${{ secrets.AIO_CNA_TVMURL }}
-    - name: npm install, build, and test
       run: |
         echo $secret
       env:
