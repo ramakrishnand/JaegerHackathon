@@ -25,5 +25,7 @@ jobs:
         AIO_RUNTIME_APIHOST: ${{ secrets.AIO_RUNTIME_APIHOST }}
       run: |
         echo $AIO_RUNTIME_NAMESPACE
-
+        npm install -g @adobe/aio-cli
+        npm link
+        aio app deploy
 
