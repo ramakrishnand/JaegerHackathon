@@ -18,7 +18,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
+      env: # Or as an environment variable
+        secret: ${{ secrets.SuperSecret }}
       run: |
-        echo ${{ secrets.AIO_CNA_TVMURL}}
+        echo $secret
       env:
         CI: true
