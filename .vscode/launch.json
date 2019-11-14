@@ -1,0 +1,47 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Action:JaegerHackathon-0.0.1/hello",
+      "runtimeExecutable": "/Users/rdevaraj/General/AdobeIO/IORuntime/CNA/JaegerHackathon/node_modules/.bin/wskdebug",
+      "env": {
+        "WSK_CONFIG_FILE": "/Users/rdevaraj/General/AdobeIO/IORuntime/CNA/JaegerHackathon/.wskdebug.props.tmp"
+      },
+      "timeout": 30000,
+      "localRoot": "/Users/rdevaraj/General/AdobeIO/IORuntime/CNA/JaegerHackathon",
+      "remoteRoot": "/code",
+      "outputCapture": "std",
+      "runtimeArgs": [
+        "JaegerHackathon-0.0.1/hello",
+        "/Users/rdevaraj/General/AdobeIO/IORuntime/CNA/JaegerHackathon/actions/hello/index.js",
+        "-v"
+      ]
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Web",
+      "url": "http://localhost:9080",
+      "webRoot": "/Users/rdevaraj/General/AdobeIO/IORuntime/CNA/JaegerHackathon/web-src",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Actions",
+      "configurations": [
+        "Action:JaegerHackathon-0.0.1/hello"
+      ]
+    },
+    {
+      "name": "WebAndActions",
+      "configurations": [
+        "Web",
+        "Action:JaegerHackathon-0.0.1/hello"
+      ]
+    }
+  ]
+}
