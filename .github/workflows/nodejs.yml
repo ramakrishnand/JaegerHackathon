@@ -23,7 +23,7 @@ jobs:
         AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
         AIO_RUNTIME_NAMESPACE: 23294_49615
         AIO_RUNTIME_APIHOST: ${{ secrets.AIO_RUNTIME_APIHOST }}
-        AIO_CNA_TVMURL: ${{ secrets.AIO_CNA_TVMURL }}
+        AIO_CNA_TVMURL: https://adobeio.adobeioruntime.net/apis/tvm/
       run: |
         npm install -g @adobe/aio-cli
         npm link
