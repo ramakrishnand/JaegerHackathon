@@ -19,8 +19,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
-        npm install -g @adobe/aio-cli
-        npm link
-        aio app deploy
+        echo ${{ secrets.AIO_CNA_TVMURL}}
       env:
         CI: true
