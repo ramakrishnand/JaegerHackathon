@@ -21,7 +21,7 @@ jobs:
       env:
         CI: true
         AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
-        AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+        AIO_RUNTIME_NAMESPACE: 23294_49615
         AIO_RUNTIME_APIHOST: ${{ secrets.AIO_RUNTIME_APIHOST }}
         AIO_CNA_TVMURL: ${{ secrets.AIO_CNA_TVMURL }}
       run: |
