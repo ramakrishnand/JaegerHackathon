@@ -18,10 +18,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
-      with:
-        secret: ${{ secrets.AIO_CNA_TVMURL }}
-      run: |
-        echo $secret
       env:
         CI: true
+        AIO_RUNTIME_AUTH: ${{ secrets.AIO_RUNTIME_AUTH }}
+        AIO_RUNTIME_NAMESPACE: ${{ secrets.AIO_RUNTIME_NAMESPACE }}
+        AIO_RUNTIME_APIHOST: ${{ secrets.AIO_RUNTIME_APIHOST }}
+      run: |
+        echo $AIO_RUNTIME_NAMESPACE
+
 
