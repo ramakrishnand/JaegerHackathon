@@ -23,7 +23,7 @@ function main (args) {
       }
     }
 
-    message = `hello ${name}!`
+    message = `hello hello ${name}!`
   }
   return {
     headers: headers,
